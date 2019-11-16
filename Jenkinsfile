@@ -3,8 +3,8 @@ pipeline {
 	  stages {
 		  stage ('build') {
 		  steps {
-		  withmaven (maven : 'apache-maven-3.6.1') {
-		  sh 'mvn install'
+		  WithMaven(maven : 'apache-maven-3.6.1') {
+		  sh ('mvn install')
 			}	  
 			}  
 			}
