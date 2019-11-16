@@ -1,15 +1,11 @@
 pipeline {
-	 agent any 
-	 stages {
-		 stage('One') {
-      		 steps {
-			echo 'this is sample one'
-		}
-		}
-		stage ('Two') {
-		steps {
-			echo 'this is sample two'
-		}		
-		}
-		}
-}	
+	  agent any
+	  stages {
+		  stage ('build') {
+		  steps {
+	          maven 'apache-maven-3.6.1'
+		  sh 'mvn install'  
+			}
+			}
+	           }
+		}				
